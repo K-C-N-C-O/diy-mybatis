@@ -1,5 +1,6 @@
 package cn.kcnco.mybatis.test.po;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class User {
@@ -12,9 +13,26 @@ public class User {
     // 头像
     private String userHead;
     // 创建时间
-    private Date createTime;
+    private Timestamp createTime;
+
+    public Timestamp getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
+    }
+
+    public Timestamp getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Timestamp updateTime) {
+        this.updateTime = updateTime;
+    }
+
     // 更新时间
-    private Date updateTime;
+    private Timestamp updateTime;
 
     public Long getId() {
         return id;
@@ -48,19 +66,5 @@ public class User {
         this.userHead = userHead;
     }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }

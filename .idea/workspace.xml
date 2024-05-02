@@ -4,30 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f361b0aa-09d6-41d5-b9f7-15d074d401c4" name="Changes" comment="feat:Mapper XML的解析和注册使用">
-      <change afterPath="$PROJECT_DIR$/mybatis.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/DataSourceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/druid/DruidDataSourceFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/BoundSql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/Environment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/ParameterMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/TransactionIsolationLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/TransactionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/jdbc/JdbcTransaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/jdbc/JdbcTransactionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/type/JdbcType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/type/TypeAliasRegistry.java" afterDir="false" />
+    <list default="true" id="f361b0aa-09d6-41d5-b9f7-15d074d401c4" name="Changes" comment="feat:数据源的解析、创建和使用">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/pooled/PoolState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/pooled/PooledConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/pooled/PooledDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/pooled/PooledDataSourceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/unpooled/UnpooledDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/unpooled/UnpooledDataSourceFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/BaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/BaseBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/MappedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/MappedStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IschoolDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/po/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/po/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/mybatis-config-datasource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config-datasource.xml" afterDir="false" />
     </list>
@@ -81,8 +68,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "environment-parse",
-    "last_opened_file_path": "D:/code/diy-mybatis/src",
+    "git-widget-placeholder": "pooled&&unpooledDataSource",
+    "last_opened_file_path": "D:/code/diy-mybatis/src/main/java/cn/kcnco/mybatis/datasource/pooled",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,17 +89,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\datasource\pooled" />
+      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\datasource\unpooled" />
       <recent name="D:\code\diy-mybatis\src" />
       <recent name="D:\code\diy-mybatis\src\test\java\cn\kcnco\mybatis\test" />
       <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\transaction\jdbc" />
-      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\binding" />
-      <recent name="D:\code\diy-mybatis\src\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\code\diy-mybatis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.test_selectOne">
+  <component name="RunManager" selected="JUnit.ApiTest.test_pooled">
     <configuration name="ApiTest.test_MapperProxyFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diy-mybatis" />
       <extension name="coverage">
@@ -140,6 +127,22 @@
       <option name="PACKAGE_NAME" value="cn.kcnco.mybatis.test" />
       <option name="MAIN_CLASS_NAME" value="cn.kcnco.mybatis.test.ApiTest" />
       <option name="METHOD_NAME" value="test_SqlSessionFactory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.test_pooled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diy-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.kcnco.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.kcnco.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.kcnco.mybatis.test.ApiTest" />
+      <option name="METHOD_NAME" value="test_pooled" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,10 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.test_selectOne" />
+        <item itemvalue="JUnit.ApiTest.test_pooled" />
         <item itemvalue="JUnit.ApiTest.test_SqlSessionFactory" />
+        <item itemvalue="JUnit.ApiTest.test_selectOne" />
         <item itemvalue="JUnit.ApiTest.test_proxy_class" />
-        <item itemvalue="JUnit.ApiTest.test_MapperProxyFactory" />
         <item itemvalue="JUnit.ApiTest.test_MapperProxyFactory" />
       </list>
     </recent_temporary>
@@ -200,6 +203,7 @@
       <workItem from="1714483348103" duration="6850000" />
       <workItem from="1714558038744" duration="2204000" />
       <workItem from="1714565600153" duration="22715000" />
+      <workItem from="1714649955506" duration="9617000" />
     </task>
     <task id="LOCAL-00001" summary="feat:创建简单的映射器代理工厂">
       <option name="closed" value="true" />
@@ -228,7 +232,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -238,5 +254,16 @@
     <MESSAGE value="feat:创建简单的映射器代理工厂" />
     <MESSAGE value="feat:Mapper XML的解析和注册使用" />
     <option name="LAST_COMMIT_MESSAGE" value="feat:Mapper XML的解析和注册使用" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

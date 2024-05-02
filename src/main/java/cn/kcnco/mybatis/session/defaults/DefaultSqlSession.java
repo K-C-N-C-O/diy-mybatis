@@ -68,7 +68,7 @@ public class DefaultSqlSession implements SqlSession {
                     String setMethod = "set" + columnName.substring(0, 1).toUpperCase() + columnName.substring(1);
                     Method method;
                     if (value instanceof Timestamp) {
-                        method = clazz.getMethod(setMethod, Date.class);
+                        method = clazz.getMethod(setMethod, Timestamp.class);
                     } else {
                         method = clazz.getMethod(setMethod, value.getClass());
                     }
