@@ -4,8 +4,16 @@ import cn.kcnco.mybatis.binding.MapperRegistry;
 import cn.kcnco.mybatis.datasource.druid.DruidDataSourceFactory;
 import cn.kcnco.mybatis.datasource.pooled.PooledDataSourceFactory;
 import cn.kcnco.mybatis.datasource.unpooled.UnpooledDataSourceFactory;
+import cn.kcnco.mybatis.executor.Executor;
+import cn.kcnco.mybatis.executor.SimpleExecutor;
+import cn.kcnco.mybatis.executor.resultset.DefaultResultSetHandler;
+import cn.kcnco.mybatis.executor.resultset.ResultSetHandler;
+import cn.kcnco.mybatis.executor.statement.PreparedStatementHandler;
+import cn.kcnco.mybatis.executor.statement.StatementHandler;
+import cn.kcnco.mybatis.mapping.BoundSql;
 import cn.kcnco.mybatis.mapping.Environment;
 import cn.kcnco.mybatis.mapping.MappedStatement;
+import cn.kcnco.mybatis.transaction.Transaction;
 import cn.kcnco.mybatis.transaction.jdbc.JdbcTransactionFactory;
 import cn.kcnco.mybatis.type.TypeAliasRegistry;
 
@@ -75,6 +83,27 @@ public class Configuration {
 
     public void setEnvironment(Environment environment) {
         this.environment = environment;
+    }
+
+    /**
+     * 创建结果集处理器
+     */
+    public ResultSetHandler newResultSetHandler(Executor executor, MappedStatement mappedStatement, BoundSql boundSql) {
+        return new DefaultResultSetHandler(executor, mappedStatement, boundSql);
+    }
+
+    /**
+     * 生产执行器
+     */
+    public Executor newExecutor(Transaction transaction) {
+        return new SimpleExecutor(this, transaction);
+    }
+
+    /**
+     * 创建语句处理器
+     */
+    public StatementHandler newStatementHandler(Executor executor, MappedStatement mappedStatement, Object parameter, ResultHandler resultHandler, BoundSql boundSql) {
+        return new PreparedStatementHandler(executor, mappedStatement, parameter, resultHandler, boundSql);
     }
 
 

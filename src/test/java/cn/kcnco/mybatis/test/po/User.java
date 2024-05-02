@@ -13,26 +13,27 @@ public class User {
     // 头像
     private String userHead;
     // 创建时间
-    private Timestamp createTime;
+    private Date createTime;
+    // 更新时间
+    private Date updateTime;
 
-    public Timestamp getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Timestamp createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public Timestamp getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(Timestamp updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-    // 更新时间
-    private Timestamp updateTime;
+
 
     public Long getId() {
         return id;
