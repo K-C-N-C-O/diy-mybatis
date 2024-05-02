@@ -1,5 +1,7 @@
 package cn.kcnco.mybatis.test.dao;
 
+import cn.kcnco.mybatis.test.po.User;
+
 public interface IUserDao {
-    String queryUserInfoById(String uId);
+    User queryUserInfoById(Long uId);
 }

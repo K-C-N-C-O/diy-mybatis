@@ -4,29 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f361b0aa-09d6-41d5-b9f7-15d074d401c4" name="Changes" comment="feat:实现映射器的注册和使用">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/BaseBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/io/Resources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/MappedStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/SqlCommandType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/SqlSessionFactoryBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/po/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mapper/User_Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config-datasource.xml" afterDir="false" />
+    <list default="true" id="f361b0aa-09d6-41d5-b9f7-15d074d401c4" name="Changes" comment="feat:Mapper XML的解析和注册使用">
+      <change afterPath="$PROJECT_DIR$/mybatis.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/DataSourceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/datasource/druid/DruidDataSourceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/BoundSql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/Environment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/ParameterMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/TransactionIsolationLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/TransactionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/jdbc/JdbcTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/transaction/jdbc/JdbcTransactionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/type/JdbcType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/type/TypeAliasRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/binding/MapperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/SqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/SqlSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/BaseBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/BaseBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/MappedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/mapping/MappedStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/kcnco/mybatis/session/defaults/DefaultSqlSessionFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/ApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/dao/IschoolDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/po/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/kcnco/mybatis/test/po/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/mybatis-config-datasource.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/mybatis-config-datasource.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -78,27 +81,38 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "mapperXML",
-    "last_opened_file_path": "D:/code/diy-mybatis/src/main/java/cn/kcnco/mybatis/binding",
+    "git-widget-placeholder": "environment-parse",
+    "last_opened_file_path": "D:/code/diy-mybatis/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "fileTemplates",
+    "spring.configuration.checksum": "ab4a47599ff856cb6adc74e1d086b1f0",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\binding" />
+      <recent name="D:\code\diy-mybatis\src" />
       <recent name="D:\code\diy-mybatis\src\test\java\cn\kcnco\mybatis\test" />
+      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\transaction\jdbc" />
+      <recent name="D:\code\diy-mybatis\src\main\java\cn\kcnco\mybatis\binding" />
       <recent name="D:\code\diy-mybatis\src\test" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\diy-mybatis" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.test_SqlSessionFactory">
+  <component name="RunManager" selected="JUnit.ApiTest.test_selectOne">
     <configuration name="ApiTest.test_MapperProxyFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="diy-mybatis" />
       <extension name="coverage">
@@ -147,13 +161,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApiTest.test_selectOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="diy-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.kcnco.mybatis.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.kcnco.mybatis.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.kcnco.mybatis.test.ApiTest" />
+      <option name="METHOD_NAME" value="test_selectOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiTest.test_selectOne" />
         <item itemvalue="JUnit.ApiTest.test_SqlSessionFactory" />
         <item itemvalue="JUnit.ApiTest.test_proxy_class" />
         <item itemvalue="JUnit.ApiTest.test_MapperProxyFactory" />
         <item itemvalue="JUnit.ApiTest.test_MapperProxyFactory" />
-        <item itemvalue="JUnit.ApiTest.test_proxy_class" />
       </list>
     </recent_temporary>
   </component>
@@ -168,6 +198,8 @@
       <workItem from="1714436979214" duration="4489000" />
       <workItem from="1714441789632" duration="2862000" />
       <workItem from="1714483348103" duration="6850000" />
+      <workItem from="1714558038744" duration="2204000" />
+      <workItem from="1714565600153" duration="22715000" />
     </task>
     <task id="LOCAL-00001" summary="feat:创建简单的映射器代理工厂">
       <option name="closed" value="true" />
@@ -177,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714443975235</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat:Mapper XML的解析和注册使用">
+      <option name="closed" value="true" />
+      <created>1714520804972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714520804972</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +236,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat:创建简单的映射器代理工厂" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat:创建简单的映射器代理工厂" />
+    <MESSAGE value="feat:Mapper XML的解析和注册使用" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:Mapper XML的解析和注册使用" />
   </component>
 </project>

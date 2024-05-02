@@ -1,7 +1,11 @@
 package cn.kcnco.mybatis.session;
 
 import cn.kcnco.mybatis.binding.MapperRegistry;
+import cn.kcnco.mybatis.datasource.druid.DruidDataSourceFactory;
+import cn.kcnco.mybatis.mapping.Environment;
 import cn.kcnco.mybatis.mapping.MappedStatement;
+import cn.kcnco.mybatis.transaction.jdbc.JdbcTransactionFactory;
+import cn.kcnco.mybatis.type.TypeAliasRegistry;
 
 
 import java.util.HashMap;
@@ -14,16 +18,23 @@ import java.util.Map;
  **/
 public class Configuration {
 
-    /*
-    映射注册机
-     */
 
-    protected MapperRegistry mapperRegistry=new MapperRegistry(this);
+    //环境
+    protected Environment environment;
 
-    /*
-    映射的语句存在Map里
-     */
-    protected final Map<String, MappedStatement> mappedStatements=new HashMap<>();
+    // 映射注册机
+    protected MapperRegistry mapperRegistry = new MapperRegistry(this);
+
+    // 映射的语句，存在Map里
+    protected final Map<String, MappedStatement> mappedStatements = new HashMap<>();
+
+    // 类型别名注册机
+    protected final TypeAliasRegistry typeAliasRegistry = new TypeAliasRegistry();
+
+    public Configuration() {
+        typeAliasRegistry.registerAlias("JDBC", JdbcTransactionFactory.class);
+        typeAliasRegistry.registerAlias("DRUID", DruidDataSourceFactory.class);
+    }
 
     public void addMappers(String packageName) {
         mapperRegistry.addMappers(packageName);
@@ -47,6 +58,18 @@ public class Configuration {
 
     public MappedStatement getMappedStatement(String id) {
         return mappedStatements.get(id);
+    }
+
+    public TypeAliasRegistry getTypeAliasRegistry() {
+        return typeAliasRegistry;
+    }
+
+    public Environment getEnvironment() {
+        return environment;
+    }
+
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 
 
