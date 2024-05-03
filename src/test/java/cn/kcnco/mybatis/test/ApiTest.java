@@ -9,8 +9,6 @@ import cn.kcnco.mybatis.session.Configuration;
 import cn.kcnco.mybatis.session.SqlSession;
 import cn.kcnco.mybatis.session.SqlSessionFactory;
 import cn.kcnco.mybatis.session.SqlSessionFactoryBuilder;
-import cn.kcnco.mybatis.session.defaults.DefaultSqlSession;
-import cn.kcnco.mybatis.session.defaults.DefaultSqlSessionFactory;
 import cn.kcnco.mybatis.test.dao.IUserDao;
 import cn.kcnco.mybatis.test.po.User;
 import com.alibaba.fastjson.JSON;
@@ -19,9 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.Reader;
-import java.sql.Connection;
-import java.sql.SQLException;
+
 
 
 public class ApiTest {
